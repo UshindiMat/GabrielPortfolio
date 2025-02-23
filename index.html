@@ -357,8 +357,128 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+				</div>
+				
+				<!-- Notable Presentations Section -->
+				<div class="presentations-section">
+					<h2 class="section-title text-center mb-5">
+						<span class="fancy-border">NOTABLE PRESENTATIONS</span>
+					</h2>
+					
+					<div class="presentations-container">
+						<div class="presentation-card ftco-animate">
+							<div class="presentation-date">January 2025</div>
+							<h3 class="presentation-title">"Sustainable Resource Scheduling in the Internet of Vehicles in Beyond 5G Era"</h3>
+							<div class="presentation-venue">
+								<i class="icon-location-arrow"></i>
+								Technical presentation, ETH Zurich, Networked Systems Group (NSG)
+							</div>
+						</div>
+
+						<div class="presentation-card ftco-animate">
+							<div class="presentation-date">September 2024</div>
+							<h3 class="presentation-title">"Resource Scheduling in the Internet of Vehicles for Beyond 5G Systems"</h3>
+							<div class="presentation-venue">
+								<i class="icon-graduation-cap"></i>
+								MSc thesis, University of Essex, School of Computer Science and Electronic Engineering
+							</div>
+						</div>
+
+						<div class="presentation-card ftco-animate">
+							<div class="presentation-date">October 2024</div>
+							<h3 class="presentation-title">"Chevening Scholarship Application Q&A: Career Plan Essay"</h3>
+							<div class="presentation-venue">
+								<i class="icon-users"></i>
+								Online Webinar with over 80 participants from 15 countries
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<style>
+					.presentations-section {
+						padding: 4rem 0;
+						background: rgba(255,255,255,0.02);
+					}
+
+					.fancy-border {
+						position: relative;
+						display: inline-block;
+						padding: 0 20px;
+					}
+
+					.fancy-border::before,
+					.fancy-border::after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						width: 50px;
+						height: 2px;
+						background: #ffc107;
+					}
+
+					.fancy-border::before {
+						right: 100%;
+					}
+
+					.fancy-border::after {
+						left: 100%;
+					}
+
+					.presentations-container {
+						max-width: 900px;
+						margin: 0 auto;
+					}
+
+					.presentation-card {
+						background: rgba(255,255,255,0.05);
+						border-radius: 10px;
+						padding: 2rem;
+						margin-bottom: 2rem;
+						transition: all 0.3s ease;
+						border: 1px solid rgba(255,255,255,0.1);
+					}
+
+					.presentation-card:hover {
+						transform: translateY(-5px);
+						box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+						border-color: #ffc107;
+					}
+
+					.presentation-date {
+						color: #ffc107;
+						font-size: 0.9rem;
+						margin-bottom: 0.5rem;
+					}
+
+					.presentation-title {
+						color: #fff;
+						font-size: 1.2rem;
+						margin-bottom: 1rem;
+					}
+
+					.presentation-venue {
+						color: rgba(255,255,255,0.7);
+						font-size: 0.9rem;
+					}
+
+					.presentation-venue i {
+						color: #ffc107;
+						margin-right: 0.5rem;
+					}
+
+					@media (max-width: 768px) {
+						.fancy-border::before,
+						.fancy-border::after {
+							width: 30px;
+						}
+
+						.presentation-card {
+							padding: 1.5rem;
+						}
+					}
+				</style>
+
 
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6 text-center ftco-animate">

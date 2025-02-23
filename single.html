@@ -412,6 +412,14 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script>
+      // Ensure the drawer menu closes properly on mobile devices
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.navbar-collapse').classList.remove('show');
+        });
+      });
+  </script>
     
   </body>
 </html>

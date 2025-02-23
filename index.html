@@ -37,6 +37,13 @@
         .resume-box {
           margin-bottom: 20px;
         }
+        .slider-item .text h1,
+        .slider-item .text h2 {
+          font-size: 1.5rem;
+        }
+        .slider-item .text p {
+          font-size: 1rem;
+        }
       }
 
       @media (max-width: 576px) {
@@ -52,12 +59,21 @@
         .img-about {
           height: auto;
         }
+        .slider-item .text p {
+          font-size: 0.875rem;
+        }
       }
 
       /* Ensure images are responsive */
       img {
         max-width: 100%;
         height: auto;
+      }
+
+      /* Fix navigation bar scrolling issue */
+      .navbar-collapse {
+        overflow-y: auto;
+        max-height: 80vh;
       }
     </style>
   </head>

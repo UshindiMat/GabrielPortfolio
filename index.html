@@ -249,7 +249,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="resume-box">
+                    <div class="resume-box education-box">
                         <h3 class="section-title">
                             <i class="fas fa-graduation-cap mr-2"></i>Education
                         </h3>
@@ -274,54 +274,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <style>
-                            /* Laptop/Desktop styles */
-                            @media (min-width: 992px) {
-                                .timeline-content {
-                                    padding-left: 2rem;
-                                    margin-left: 2rem;
-                                }
-                                .timeline-badge {
-                                    float: left;
-                                    margin-right: 2rem;
-                                }
-                                .details {
-                                    margin-left: 2rem;
-                                }
-                            }
-
-                            /* Tablet styles */
-                            @media (min-width: 768px) and (max-width: 991px) {
-                                .timeline-content {
-                                    padding-left: 1.5rem;
-                                    margin-left: 1rem;
-                                }
-                                .timeline-badge {
-                                    margin-bottom: 1rem;
-                                }
-                                .details {
-                                    margin-left: 1rem;
-                                }
-                            }
-
-                            /* Mobile styles */
-                            @media (max-width: 767px) {
-                                .timeline-content {
-                                    padding-left: 1rem;
-                                    margin-left: 0;
-                                }
-                                .timeline-badge {
-                                    margin-bottom: 1rem;
-                                }
-                                .details {
-                                    margin-left: 0;
-                                }
-                                .details ul {
-                                    padding-left: 1rem;
-                                }
-                            }
-                        </style>
 
                         <div class="resume-wrap ftco-animate fade-up">
                             <div class="timeline-badge">
@@ -528,6 +480,27 @@
 
                 .section-title {
                     font-size: 1.5rem;
+                }
+            }
+
+            .education-box {
+                padding: 2rem;
+                margin-bottom: 2rem;
+                background: rgba(255,255,255,0.05);
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                height: 100%;
+            }
+
+            .education-box .timeline-content {
+                margin-left: 0;
+                padding-left: 1.5rem;
+                border-left: 3px solid #ffc107;
+            }
+
+            @media (max-width: 991px) {
+                .education-box {
+                    margin-bottom: 2rem;
                 }
             }
         </style>

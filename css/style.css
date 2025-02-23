@@ -5,10 +5,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 .resume-box {
-    border: 1px solid #ddd;
+    border: 1px solid #1e1a1a;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #f9f9f9;
+    background-color: #000000;
 }
 :root {
   --blue: #007bff;

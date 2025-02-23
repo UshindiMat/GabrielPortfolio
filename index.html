@@ -739,6 +739,8 @@
       document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         link.addEventListener('click', () => {
           document.querySelector('.navbar-collapse').classList.remove('show');
+          document.body.classList.remove('modal-open');
+          document.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'false');
         });
       });
   </script>

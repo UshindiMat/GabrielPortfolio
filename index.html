@@ -251,12 +251,12 @@
                 <div class="col-md-12">
                     <div class="row">
                         <!-- Education Section -->
-                        <div class="col-lg-6">
+                        <div class="col-md-12">
                             <div class="resume-box experience-box">
                                 <h3 class="section-title">
                                     <i class="fas fa-graduation-cap mr-2"></i>Education
                                 </h3>
-                                <div class="resume-wrap ftco-animate fade-up">
+                                <div class="resume-wrap ftco-animate fade-up w-100">
                                     <div class="timeline-badge">
                                         <span class="date">2023-2024</span>
                                     </div>
@@ -278,7 +278,7 @@
                                     </div>
                                 </div>
 
-                                <div class="resume-wrap ftco-animate fade-up">
+                                <div class="resume-wrap ftco-animate fade-up w-100">
                                     <div class="timeline-badge">
                                         <span class="date">2016-2019</span>
                                     </div>
@@ -298,10 +298,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Work Experience Section -->
-                        <div class="col-lg-6">
+                            <!-- Work Experience Section -->
                             <div class="resume-box experience-box">
                                 <h3 class="section-title">
                                     <i class="fas fa-briefcase mr-2"></i>Work Experience
@@ -486,6 +484,29 @@
 
                 .section-title {
                     font-size: 1.5rem;
+                }
+            }
+            .resume-wrap {
+                width: 100%;
+                margin-bottom: 30px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                padding-bottom: 30px;
+            }
+
+            .resume-wrap:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .timeline-content {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            @media (min-width: 768px) {
+                .timeline-content {
+                    padding-right: 30px;
+                    padding-left: 30px;
                 }
             }
         </style>

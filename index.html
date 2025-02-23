@@ -664,14 +664,82 @@
             <div class="block-18">
               <div class="text">
                 <strong class="number" data-number="100">0</strong>
-                <span>Awards</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1200">0</strong>
+				<span>Awards</span>
+				<div class="awards-container mt-4"></div>
+				  <div class="award-card ftco-animate">
+					<div class="award-header">
+					  <i class="icon-trophy text-warning mb-3" style="font-size: 2.5em;"></i>
+					  <h3 class="award-title">Chevening Scholarship Award</h3>
+					  <span class="award-date"><i class="icon-calendar"></i> July 2023</span>
+					</div>
+					<div class="award-body">
+					  <p class="award-description">
+						Awarded the prestigious Chevening scholarship by the United Kingdom government (FCDO) to undertake a 
+						master's degree at the University of Essex in England, in recognition of community impact through education and 
+						technology.
+					  </p>
+					</div>
+				  </div>
+
+				  <div class="award-card ftco-animate">
+					<div class="award-header">
+					  <i class="icon-star text-warning mb-3" style="font-size: 2.5em;"></i>
+					  <h3 class="award-title">Social Contributor of the Year Award</h3>
+					  <span class="award-date"><i class="icon-calendar"></i> March 2021</span>
+					</div>
+					<div class="award-body">
+					  <p class="award-description">
+						Recognized by the Peace Foundation DRC for outstanding volunteer contributions, including lecturing underprivileged
+						children and training youth on the importance of ICT. Highlighted the role of technology in solving community challenges,
+						fostering innovation, and driving local development.
+					  </p>
+					</div>
+				  </div>
+				</div>
+
+				<style>
+				  .awards-container {
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+				  }
+				  
+				  .award-card {
+					background: rgba(255,255,255,0.05);
+					border-radius: 15px;
+					padding: 2rem;
+					transition: all 0.3s ease;
+					border: 1px solid rgba(255,255,255,0.1);
+				  }
+				  
+				  .award-card:hover {
+					transform: translateY(-5px);
+					box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+					border-color: #ffc107;
+				  }
+				  
+				  .award-header {
+					text-align: center;
+					margin-bottom: 1.5rem;
+				  }
+				  
+				  .award-title {
+					color: #ffc107;
+					font-size: 1.5rem;
+					margin: 0.5rem 0;
+				  }
+				  
+				  .award-date {
+					color: rgba(255,255,255,0.7);
+					font-size: 0.9rem;
+				  }
+				  
+				  .award-description {
+					color: rgba(255,255,255,0.9);
+					line-height: 1.6;
+					text-align: justify;
+				  }
+				</style>
                 <span>Complete Projects</span>
               </div>
             </div>

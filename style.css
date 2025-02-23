@@ -59,6 +59,10 @@ body {
   text-align: left;
   background-color: #fff; }
 
+body.modal-open {
+  overflow: auto;
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 

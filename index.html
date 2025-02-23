@@ -743,6 +743,15 @@
           document.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'false');
         });
       });
+
+      // Ensure body is scrollable when the menu is open
+      document.querySelector('.navbar-toggler').addEventListener('click', () => {
+        if (document.querySelector('.navbar-collapse').classList.contains('show')) {
+          document.body.classList.remove('modal-open');
+        } else {
+          document.body.classList.add('modal-open');
+        }
+      });
   </script>
     
   </body>

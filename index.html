@@ -50,6 +50,11 @@
         .home-slider {
           overflow-y: auto;
         }
+        .slider-item {
+          height: auto !important;
+          background-size: cover;
+          background-position: center;
+        }
       }
 
       @media (max-width: 576px) {
@@ -74,6 +79,11 @@
         .home-slider {
           overflow-y: auto;
         }
+        .slider-item {
+          height: auto !important;
+          background-size: cover;
+          background-position: center;
+        }
       }
 
       /* Ensure images are responsive */
@@ -91,6 +101,13 @@
       /* Ensure body can scroll */
       body {
         overflow-y: scroll;
+      }
+
+      /* Ensure slider-item images are displayed */
+      .slider-item {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
       }
     </style>
   </head>

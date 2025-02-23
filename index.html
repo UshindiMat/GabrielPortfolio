@@ -47,6 +47,9 @@
         .js-fullheight {
           height: auto !important;
         }
+        .home-slider {
+          overflow-y: auto;
+        }
       }
 
       @media (max-width: 576px) {
@@ -67,6 +70,9 @@
         }
         .js-fullheight {
           height: auto !important;
+        }
+        .home-slider {
+          overflow-y: auto;
         }
       }
 
@@ -778,6 +784,11 @@
         } else {
           document.body.classList.add('modal-open');
         }
+      });
+
+      // Ensure the home slider allows vertical scrolling
+      document.querySelectorAll('.home-slider .slider-item').forEach(item => {
+        item.style.overflowY = 'auto';
       });
   </script>
     

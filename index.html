@@ -477,8 +477,115 @@
 							padding: 1.5rem;
 						}
 					}
-				</style>
+        </style>
 
+        <!-- Certifications Section -->
+        <div class="certifications-section mt-5">
+          <h2 class="text-center mb-4">
+            <span class="fancy-border">CERTIFICATIONS</span>
+          </h2>
+          
+          <div class="certifications-container">
+            <div class="certification-card ftco-animate">
+              <div class="certification-icon">
+                <i class="icon-google text-primary"></i>
+              </div>
+              <div class="certification-content">
+                <h3>Google Cybersecurity Certification</h3>
+                <div class="certification-meta">
+                  <span><i class="icon-check-circle"></i> Verified</span>
+                  <span><i class="icon-badge"></i> Professional</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-card ftco-animate">
+              <div class="certification-icon">
+                <i class="icon-ibm text-primary"></i>
+              </div>
+              <div class="certification-content">
+                <h3>IBM Machine Learning Certification with Python</h3>
+                <div class="certification-meta">
+                  <span><i class="icon-check-circle"></i> Verified</span>
+                  <span><i class="icon-badge"></i> Professional</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .certifications-section {
+            padding: 3rem 0;
+          }
+
+          .certifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+          }
+
+          .certification-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+          }
+
+          .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #ffc107;
+          }
+
+          .certification-icon {
+            font-size: 2.5em;
+            color: #ffc107;
+          }
+
+          .certification-content h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .certification-meta {
+            display: flex;
+            gap: 1rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+          }
+
+          .certification-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+
+          .certification-meta i {
+            color: #ffc107;
+          }
+
+          @media (max-width: 768px) {
+            .certification-card {
+              flex-direction: column;
+              text-align: center;
+              padding: 1.5rem;
+            }
+
+            .certification-meta {
+              justify-content: center;
+            }
+          }
+        </style>
+</div>
 
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6 text-center ftco-animate">

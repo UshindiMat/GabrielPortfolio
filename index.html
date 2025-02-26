@@ -1295,28 +1295,21 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="https://formsubmit.co/gabrielmat@passdrc.com" method="POST" class="bg-light p-4 p-md-5 contact-form">
-              <!-- Honeypot -->
-              <input type="text" name="_honey" style="display: none;">
-              <!-- Disable Captcha -->
-              <input type="hidden" name="_captcha" value="false">
-              <!-- Success page -->
-              <input type="hidden" name="_next" value="https://ushindimat.github.io/GabrielPortfolio/thank-you.html">
-              
+            <form action="#" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                <input type="text" class="form-control" placeholder="Your Name">
               </div>
               <div class="form-group">
-                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                <input type="text" class="form-control" placeholder="Your Email">
               </div>
               <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                <input type="text" class="form-control" placeholder="Subject">
               </div>
               <div class="form-group">
-                  <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           
@@ -1411,23 +1404,22 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   
   <script src="js/main.js"></script>
   <script src="js/image-loader.js"></script>
-  <script src="js/contact-form.js"></script>
+
   <script>
       // Ensure the drawer menu closes properly on mobile devices
       document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-        link.addEventListener('click', () => {nav-link').forEach(link => {
+        link.addEventListener('click', () => {
           document.querySelector('.navbar-collapse').classList.remove('show');
-          document.body.classList.remove('modal-open');assList.remove('show');
+          document.body.classList.remove('modal-open');
           document.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'false');
-        });ocument.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'false');
-      }););
+        });
       });
+
       // Ensure body is scrollable when the menu is open
       document.querySelector('.navbar-toggler').addEventListener('click', () => {
         if (document.querySelector('.navbar-collapse').classList.contains('show')) {
-          document.body.classList.remove('modal-open');classList.contains('show')) {
-        } else {nt.body.classList.remove('modal-open');
-          document.body.classList.add('modal-open');
+          document.body.classList.remove('modal-open');
+        } else {
           document.body.classList.add('modal-open');
         }
       });

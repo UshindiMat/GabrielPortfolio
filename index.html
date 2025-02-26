@@ -1295,18 +1295,18 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+            <form action="#" class="bg-light p-4 p-md-5 contact-form">t p-4 p-md-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name">"Your Name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" class="form-control" placeholder="Your Email">="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="Subject">lder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>/textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
@@ -1404,22 +1404,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   
   <script src="js/main.js"></script>
   <script src="js/image-loader.js"></script>
-
+  <script src="js/contact-form.js"></script>
   <script>
       // Ensure the drawer menu closes properly on mobile devices
       document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', () => {nav-link').forEach(link => {
           document.querySelector('.navbar-collapse').classList.remove('show');
-          document.body.classList.remove('modal-open');
+          document.body.classList.remove('modal-open');assList.remove('show');
           document.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'false');
-        });
+        });ocument.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'false');
+      }););
       });
-
       // Ensure body is scrollable when the menu is open
       document.querySelector('.navbar-toggler').addEventListener('click', () => {
         if (document.querySelector('.navbar-collapse').classList.contains('show')) {
-          document.body.classList.remove('modal-open');
-        } else {
+          document.body.classList.remove('modal-open');classList.contains('show')) {
+        } else {nt.body.classList.remove('modal-open');
+          document.body.classList.add('modal-open');
           document.body.classList.add('modal-open');
         }
       });

@@ -1295,37 +1295,23 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="https://formsubmit.co/gabrielmat@passdrc.com" method="POST" class="bg-light p-4 p-md-5 contact-form" id="contactForm">
-              <!-- Honey pot to prevent spam -->
-              <input type="text" name="_honey" style="display: none;">
-              
-              <!-- Disable captcha -->
-              <input type="hidden" name="_captcha" value="true">
-              
-              <!-- Success page -->
-              <input type="hidden" name="_next" value="https://ushindimat.github.io/GabrielPortfolio/thanks.html">
-              
-              <!-- Form configuration -->
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_subject" value="New Contact Form Submission">
-              <input type="hidden" name="_replyto">
-
+            <form action="https://formspree.io/f/manqgzpe" method="POST" class="bg-light p-4 p-md-5 contact-form" id="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required minlength="2">
+                <input type="text" name="Name" class="form-control" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                <input type="email" name="Email" class="form-control" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" name="subject" class="form-control" placeholder="Subject" required minlength="2">
+                <input type="text" name="Subject" class="form-control" placeholder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required minlength="10"></textarea>
+                <textarea name="Message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary py-3 px-5">Send Message</button>
               </div>
-              <div id="form-message" class="alert" style="display: none;"></div>
+              <div id="form-status" class="alert" style="display: none;"></div>
             </form>
           </div>
 
@@ -1466,6 +1452,48 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         formMessage.className = 'alert alert-info';
         formMessage.textContent = 'Sending message...';
       });
+
+      var form = document.getElementById("contactForm");
+      var formStatus = document.getElementById("form-status");
+      
+      async function handleSubmit(event) {
+          event.preventDefault();
+          var data = new FormData(event.target);
+          
+          formStatus.style.display = 'block';
+          formStatus.className = 'alert alert-info';
+          formStatus.innerHTML = "Sending...";
+          
+          try {
+              const response = await fetch(event.target.action, {
+                  method: form.method,
+                  body: data,
+                  headers: {
+                      'Accept': 'application/json'
+                  }
+              });
+              
+              if (response.ok) {
+                  formStatus.className = 'alert alert-success';
+                  formStatus.innerHTML = "Thanks for your message! I'll get back to you soon.";
+                  form.reset();
+              } else {
+                  const data = await response.json();
+                  if (data.errors) {
+                      formStatus.className = 'alert alert-danger';
+                      formStatus.innerHTML = data.errors.map(error => error.message).join(", ");
+                  } else {
+                      formStatus.className = 'alert alert-danger';
+                      formStatus.innerHTML = "Oops! There was a problem submitting your form";
+                  }
+              }
+          } catch (error) {
+              formStatus.className = 'alert alert-danger';
+              formStatus.innerHTML = "Oops! There was a problem submitting your form";
+          }
+      }
+      
+      form.addEventListener("submit", handleSubmit);
   </script>
     
   </body>

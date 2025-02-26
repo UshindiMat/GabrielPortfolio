@@ -7,24 +7,40 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <!-- Resource hints for critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <!-- Critical CSS inline -->
+    <style>
+      /* Add your most critical styles here */
+      .ftco_navbar { background: #000; }
+      .hero { min-height: 100vh; }
+    </style>
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <!-- Defer non-critical CSS -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    
+    <!-- Optimize font loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Defer non-critical CSS -->
+    <link rel="preload" href="css/open-iconic-bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/flaticon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/icomoon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/mobile-fixes.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-    <link rel="preload" href="images/about.jpg" as="image">
-    <link rel="preload" href="images/man sittingonpc.jpg" as="image">
+    <!-- Preload critical images -->
+    <link rel="preload" href="images/about.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="images/man sittingonpc.jpg" as="image" type="image/jpeg">
 
     <style>
       /* Add custom media queries for responsiveness */
@@ -1405,20 +1421,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
+  <script defer src="js/jquery.min.js"></script>
+  <script defer src="js/bootstrap.min.js"></script>
+  <script defer src="js/jquery.easing.1.3.js"></script>
+  <script defer src="js/jquery.waypoints.min.js"></script>
+  <script defer src="js/jquery.stellar.min.js"></script>
+  <script defer src="js/owl.carousel.min.js"></script>
+  <script defer src="js/jquery.magnific-popup.min.js"></script>
+  <script defer src="js/aos.js"></script>
+  <script defer src="js/scrollax.min.js"></script>
+  <script defer src="js/main.js"></script>
   <script src="js/image-loader.js"></script>
 
   <script>

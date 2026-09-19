@@ -24,7 +24,7 @@
 }
 
 #ftco-navbar .navbar-brand {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
     line-height: 1.1;
     letter-spacing: 0;
     white-space: nowrap;
@@ -56,7 +56,7 @@
 
     #ftco-navbar .navbar-brand {
         flex: 0 0 auto;
-        margin-right: 1.25rem;
+        margin-right: 1.1rem;
     }
 
     #ftco-nav {
@@ -78,21 +78,21 @@
     }
 
     #ftco-nav .nav-link {
-        padding-left: 0.72rem !important;
-        padding-right: 0.72rem !important;
+        padding-left: 0.68rem !important;
+        padding-right: 0.68rem !important;
         font-size: 0.98rem;
     }
 }
 
 @media (min-width: 1200px) {
     #ftco-navbar .navbar-brand {
-        font-size: 1.58rem;
-        margin-right: 1.75rem;
+        font-size: 1.45rem;
+        margin-right: 1.35rem;
     }
 
     #ftco-nav .nav-link {
-        padding-left: 0.95rem !important;
-        padding-right: 0.95rem !important;
+        padding-left: 0.82rem !important;
+        padding-right: 0.82rem !important;
     }
 }
 

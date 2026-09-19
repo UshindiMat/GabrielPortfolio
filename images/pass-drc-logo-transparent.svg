@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 170" role="img" aria-labelledby="title desc">
+  <title id="title">PASS-DRC logo</title>
+  <desc id="desc">Pro Active Safety Solutions DRC wordmark.</desc>
+  <rect width="520" height="170" fill="transparent"/>
+  <g transform="translate(10 18)">
+    <path d="M8 0h51c31 0 56 25 56 56s-25 56-56 56H31V80h28c13 0 24-11 24-24S72 32 59 32H24L8 0Z" fill="#2fc77a"/>
+    <path d="M24 38h43c10 0 18 8 18 18s-8 18-18 18H56v38H24V38Z" fill="#57a5ff"/>
+    <text x="124" y="84" font-family="Arial Black, Impact, Arial, sans-serif" font-size="54" font-weight="900" letter-spacing="7" fill="#57a5ff">PASS-DRC</text>
+    <text x="6" y="137" font-family="Arial Black, Impact, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="2" fill="#2fc77a">PRO ACTIVE SAFETY SOLUTIONS-DRC</text>
+    <path d="M8 146h468" stroke="#2fc77a" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 10"/>
+  </g>
+</svg>

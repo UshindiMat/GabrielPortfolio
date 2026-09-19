@@ -46,6 +46,22 @@
     background: #fff;
 }
 
+.ftco-hireme .hireme-lead {
+    color: #fff !important;
+    opacity: 1 !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.42);
+}
+
+.resume-box .section-title .section-title-icon {
+    color: #ffc107 !important;
+}
+
+html[data-theme="light"] .resume-box .section-title .section-title-icon {
+    color: #bf7f00 !important;
+    background: rgba(255, 189, 57, 0.18);
+    border-color: rgba(217, 148, 0, 0.35);
+}
+
 @media (min-width: 992px) {
     #ftco-navbar .container {
         display: flex;
@@ -172,6 +188,32 @@
         text-align-last: left;
     }
 
+    #resume-section > .container > .row:first-child .heading-section,
+    #services-section > .container > .row:first-child .heading-section,
+    #skills-section > .container > .row:first-child .heading-section,
+    #projects-section > .container > .row:first-child .heading-section,
+    #blog-section > .container > .row:first-child .heading-section,
+    #contact-section > .container > .row:first-child .heading-section {
+        box-sizing: border-box;
+        padding-left: 0.25rem !important;
+        padding-right: 0.25rem !important;
+        max-width: 100%;
+    }
+
+    #resume-section > .container > .row:first-child .heading-section p,
+    #services-section > .container > .row:first-child .heading-section p,
+    #skills-section > .container > .row:first-child .heading-section p,
+    #projects-section > .container > .row:first-child .heading-section p,
+    #blog-section > .container > .row:first-child .heading-section p,
+    #contact-section > .container > .row:first-child .heading-section p {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .hero-wrap {
         min-height: 320px !important;
         height: auto !important;
@@ -250,6 +292,20 @@
         padding: 4.5rem 0;
     }
 
+    .ftco-hireme h2 {
+        font-size: clamp(2rem, 10vw, 2.65rem) !important;
+        line-height: 1.14;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .ftco-hireme .hireme-lead {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left !important;
+    }
+
     .heading-section {
         padding-left: 0;
         padding-right: 0;
@@ -289,6 +345,22 @@
         margin-bottom: 1.25rem !important;
         padding-bottom: 0.75rem;
         text-align: left;
+    }
+
+    .resume-box .section-title {
+        display: flex !important;
+        align-items: center;
+        gap: 0.65rem;
+    }
+
+    .resume-box .section-title .section-title-icon {
+        width: 2.15rem;
+        height: 2.15rem;
+        flex-basis: 2.15rem;
+    }
+
+    .resume-box .section-title .section-title-icon i {
+        font-size: 1rem;
     }
 
     .presentations-section .section-title {

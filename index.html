@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <link rel="stylesheet" href="css/mobile-fixes.css?v=20260919-section-spacing">
 
     <link rel="preload" href="images/about.jpg" as="image">
     <link rel="preload" href="images/man sittingonpc.jpg" as="image">
@@ -560,7 +560,8 @@
                         <div class="col-md-12">
                             <div class="resume-box experience-box">
                                 <h3 class="section-title">
-                                    <i class="fas fa-graduation-cap mr-2"></i>Education
+                                    <span class="section-title-icon"><i class="icon-school"></i></span>
+                                    <span>Education</span>
                                 </h3>
                                 <div class="resume-wrap ftco-animate fade-up w-100">
                                     <div class="timeline-badge">
@@ -608,7 +609,8 @@
                             <!-- Work Experience Section -->
                             <div class="resume-box experience-box">
                                 <h3 class="section-title">
-                                    <i class="fas fa-briefcase mr-2"></i>Work Experience
+                                    <span class="section-title-icon"><i class="icon-work"></i></span>
+                                    <span>Work Experience</span>
                                 </h3>
                                 <div class="resume-wrap ftco-animate fade-up">
                                     <div class="timeline-badge">
@@ -680,7 +682,8 @@
 
                             <div class="resume-box experience-box">
                                 <h3 class="section-title">
-                                    <i class="fas fa-users mr-2"></i>Teaching, Leadership and Community Engagement
+                                    <span class="section-title-icon"><i class="icon-supervisor_account"></i></span>
+                                    <span>Teaching, Leadership and Community Engagement</span>
                                 </h3>
                                 <div class="resume-wrap ftco-animate fade-up">
                                     <div class="timeline-badge">
@@ -719,7 +722,8 @@
 
                             <div class="resume-box experience-box">
                                 <h3 class="section-title">
-                                    <i class="fas fa-flask mr-2"></i>Ongoing Research
+                                    <span class="section-title-icon"><i class="flaticon-flasks"></i></span>
+                                    <span>Ongoing Research</span>
                                 </h3>
                                 <div class="resume-wrap ftco-animate fade-up">
                                     <div class="timeline-badge">
@@ -740,7 +744,8 @@
 
                             <div class="resume-box experience-box">
                                 <h3 class="section-title">
-                                    <i class="fas fa-hands-helping mr-2"></i>Community Service
+                                    <span class="section-title-icon"><i class="icon-public"></i></span>
+                                    <span>Community Service</span>
                                 </h3>
                                 <div class="resume-wrap ftco-animate fade-up">
                                     <div class="timeline-content">
@@ -757,7 +762,8 @@
 
                             <div class="resume-box experience-box">
                                 <h3 class="section-title">
-                                    <i class="fas fa-network-wired mr-2"></i>Membership and Activities in Professional Associations
+                                    <span class="section-title-icon"><i class="icon-network_cell"></i></span>
+                                    <span>Membership and Activities in Professional Associations</span>
                                 </h3>
                                 <div class="resume-wrap ftco-animate fade-up">
                                     <div class="timeline-content">
@@ -1110,6 +1116,32 @@
                 margin-bottom: 2rem;
                 border-bottom: 2px solid rgba(255,255,255,0.1);
                 padding-bottom: 1rem;
+            }
+
+            .resume-box .section-title {
+                display: flex;
+                align-items: center;
+                gap: 0.85rem;
+            }
+
+            .resume-box .section-title .section-title-icon {
+                width: 2.6rem;
+                height: 2.6rem;
+                flex: 0 0 2.6rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: #ffc107;
+                background: rgba(255, 193, 7, 0.12);
+                border: 1px solid rgba(255, 193, 7, 0.28);
+                box-shadow: 0 10px 24px rgba(255, 193, 7, 0.08);
+            }
+
+            .resume-box .section-title .section-title-icon i {
+                margin: 0;
+                font-size: 1.15rem;
+                line-height: 1;
             }
 
             .timeline-badge {
@@ -1836,7 +1868,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-7 ftco-animate text-center">
                         <h2>Open to <span>Research, Education and Telecom Collaboration</span></h2>
-                        <p>Available for telecommunications research, AI-RAN sustainability work, emerging technology education, and community-centered digital transformation projects.</p>
+                        <p class="hireme-lead">Available for telecommunications research, AI-RAN sustainability work, emerging technology education, and community-centered digital transformation projects.</p>
                         <p class="mb-0"><a href="#contact-section" class="btn btn-primary py-3 px-5">Contact me</a></p>
                     </div>
                 </div>

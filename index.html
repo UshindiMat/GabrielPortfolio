@@ -114,9 +114,21 @@
         max-height: 80vh;
       }
 
+      @media (min-width: 992px) {
+        .navbar-collapse {
+          max-height: none;
+          overflow: visible;
+        }
+      }
+
       /* Ensure body can scroll */
+      html {
+        overflow-x: hidden;
+      }
+
       body {
         overflow-y: scroll;
+        overflow-x: hidden;
       }
 
       /* Ensure slider-item images are displayed */
@@ -158,10 +170,12 @@
         font-weight: 700;
         letter-spacing: 0.04em;
         line-height: 1;
-        margin-left: 0.75rem;
-        padding: 0.42rem 0.68rem;
+        margin-left: 0.45rem;
+        max-width: 7.5rem;
+        padding: 0.38rem 0.58rem;
         text-transform: uppercase;
         transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        white-space: nowrap;
       }
 
       .theme-toggle:hover,
@@ -207,14 +221,33 @@
         box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       }
 
+      html[data-theme="light"] .ftco-navbar-light .navbar-brand,
+      html[data-theme="light"] .ftco-navbar-light.scrolled .navbar-brand,
+      html[data-theme="light"] .ftco-navbar-light .navbar-nav > .nav-item > .nav-link,
+      html[data-theme="light"] .ftco-navbar-light.scrolled .nav-item > .nav-link {
+        color: #161616 !important;
+      }
+
+      html[data-theme="light"] .ftco-navbar-light .navbar-nav > .nav-item .nav-link.active,
+      html[data-theme="light"] .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover,
+      html[data-theme="light"] .ftco-navbar-light.scrolled .nav-link.active,
+      html[data-theme="light"] .ftco-navbar-light.scrolled .nav-link:hover {
+        color: #d99400 !important;
+      }
+
       html[data-theme="light"] .navbar-brand,
       html[data-theme="light"] .nav-link,
+      html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text h1,
       html[data-theme="light"] .heading-section h2,
       html[data-theme="light"] .section-title,
       html[data-theme="light"] .resume-wrap h2,
+      html[data-theme="light"] .fancy-border,
       html[data-theme="light"] .presentation-title,
       html[data-theme="light"] .certification-content h3,
       html[data-theme="light"] .award-title,
+      html[data-theme="light"] .services-1 .desc h3,
+      html[data-theme="light"] .research-box h3,
+      html[data-theme="light"] .progress-wrap h3,
       html[data-theme="light"] .blog-entry .heading a,
       html[data-theme="light"] .ftco-footer .ftco-heading-2 {
         color: #161616 !important;
@@ -223,6 +256,47 @@
       html[data-theme="light"] .big,
       html[data-theme="light"] .big-2 {
         color: rgba(0,0,0,0.08) !important;
+      }
+
+      .owl-carousel.home-slider .slider-item .slider-text h1 {
+        font-size: clamp(2.35rem, 3.4vw, 3.55rem);
+        line-height: 1.12;
+        max-width: 650px;
+      }
+
+      .owl-carousel.home-slider .slider-item .slider-text .text {
+        max-width: 720px;
+      }
+
+      html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text .subheading {
+        color: #d99400 !important;
+      }
+
+      html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text p,
+      html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text .btn-outline-white {
+        color: #262626 !important;
+      }
+
+      html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text .btn-outline-white {
+        border-color: rgba(0,0,0,0.18) !important;
+        background: rgba(255,255,255,0.72) !important;
+      }
+
+      @media (max-width: 991.98px) {
+        html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text h1 {
+          color: #fff !important;
+          text-shadow: 0 2px 18px rgba(0,0,0,0.55);
+        }
+
+        html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text p,
+        html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text .btn-outline-white {
+          color: #fff !important;
+        }
+
+        html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text .btn-outline-white {
+          border-color: rgba(255,255,255,0.55) !important;
+          background: rgba(255,255,255,0.08) !important;
+        }
       }
 
       html[data-theme="light"] .resume-box,
@@ -236,7 +310,8 @@
       html[data-theme="light"] .award-card,
       html[data-theme="light"] .services-1,
       html[data-theme="light"] .contact-info .box,
-      html[data-theme="light"] .blog-entry .text {
+      html[data-theme="light"] .blog-entry .text,
+      html[data-theme="light"] .ftco-counter .block-18 {
         background: rgba(255,255,255,0.82) !important;
         border-color: rgba(0,0,0,0.08) !important;
         box-shadow: 0 12px 30px rgba(0,0,0,0.06);
@@ -248,9 +323,46 @@
       html[data-theme="light"] .certification-meta,
       html[data-theme="light"] .award-date,
       html[data-theme="light"] .award-description,
+      html[data-theme="light"] .services-1 p,
+      html[data-theme="light"] .research-box p,
+      html[data-theme="light"] .project-details li,
+      html[data-theme="light"] .progress-value,
+      html[data-theme="light"] .ftco-counter .text span,
+      html[data-theme="light"] .ftco-about ul.about-info li span,
+      html[data-theme="light"] .ftco-about .counter-wrap .text p span,
       html[data-theme="light"] p,
       html[data-theme="light"] li {
         color: #4f4f4f !important;
+      }
+
+      html[data-theme="light"] .ftco-about ul.about-info li span:first-child,
+      html[data-theme="light"] .ftco-counter .text strong.number,
+      html[data-theme="light"] .ftco-about .counter-wrap .text p span.number,
+      html[data-theme="light"] .research-box .icon span,
+      html[data-theme="light"] .project-details li span.icon-check,
+      html[data-theme="light"] .meta span,
+      html[data-theme="light"] .presentation-date,
+      html[data-theme="light"] .award-title {
+        color: #ffbd39 !important;
+      }
+
+      html[data-theme="light"] .progress {
+        background: rgba(0,0,0,0.08) !important;
+      }
+
+      html[data-theme="light"] .services-1:hover {
+        background: #ffbd39 !important;
+        border-color: #ffbd39 !important;
+      }
+
+      html[data-theme="light"] .services-1:hover .icon i,
+      html[data-theme="light"] .services-1:hover .desc h3,
+      html[data-theme="light"] .services-1:hover .desc p {
+        color: #161616 !important;
+      }
+
+      html[data-theme="light"] .services-1:hover .desc h3:after {
+        background: #161616 !important;
       }
 
       html[data-theme="light"] .theme-toggle {
@@ -1599,7 +1711,7 @@
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
-              <div class="text"></div>
+              <div class="text">
                 <strong class="number" data-number="60">0</strong>
                 <span>Students per academy cycle</span>
               </div>

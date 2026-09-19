@@ -288,20 +288,20 @@
     var style = document.createElement('style');
     style.id = 'pass-drc-preserve-theme-styles';
     style.textContent = `
-      #ftco-navbar .navbar-brand { font-size: 1.45rem; line-height: 1.1; letter-spacing: 0; white-space: nowrap; }
+      #ftco-navbar .navbar-brand { font-size: 1.35rem; line-height: 1.1; letter-spacing: 0; white-space: nowrap; }
       .micro-link { display: inline-block; margin-top: .25rem; color: #ffc107; font-size: .85rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
       .comment-list .vcard.bio img.pass-drc-theme-logo { object-fit: contain; padding: .38rem; background: #fff; }
       @media (min-width: 992px) {
         #ftco-navbar .container { display: flex; align-items: center; flex-wrap: nowrap; max-width: 1320px; }
-        #ftco-navbar .navbar-brand { flex: 0 0 auto; margin-right: 1.25rem; }
+        #ftco-navbar .navbar-brand { flex: 0 0 auto; margin-right: 1.1rem; }
         #ftco-nav { flex: 1 1 auto; min-width: 0; }
         #ftco-nav .navbar-nav { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; flex-wrap: nowrap; width: 100%; }
         #ftco-nav .nav-item { white-space: nowrap; }
-        #ftco-nav .nav-link { padding-left: .72rem !important; padding-right: .72rem !important; font-size: .98rem; }
+        #ftco-nav .nav-link { padding-left: .68rem !important; padding-right: .68rem !important; font-size: .98rem; }
       }
       @media (min-width: 1200px) {
-        #ftco-navbar .navbar-brand { font-size: 1.58rem; margin-right: 1.75rem; }
-        #ftco-nav .nav-link { padding-left: .95rem !important; padding-right: .95rem !important; }
+        #ftco-navbar .navbar-brand { font-size: 1.45rem; margin-right: 1.35rem; }
+        #ftco-nav .nav-link { padding-left: .82rem !important; padding-right: .82rem !important; }
       }
       @media (max-width: 767px) {
         #ftco-navbar .navbar-brand { max-width: calc(100vw - 110px); font-size: 1.15rem; white-space: normal; }

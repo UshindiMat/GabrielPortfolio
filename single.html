@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Research Notes - Ushindi Gabriel Matabaro</title>
+    <title>AI-RAN and B5G Insights - Ushindi Gabriel Matabaro</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -21,11 +22,148 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-fixes.css">
+
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('portfolio-theme');
+          var systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', savedTheme || systemTheme);
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
 
     <style>
       @media (max-width: 768px) { .navbar-nav { text-align: center; } .slider-item .text { text-align: center; } .img-about { width: 100%; } .resume-box { margin-bottom: 20px; } }
       @media (max-width: 576px) { .navbar-brand { font-size: 1.5rem; } .slider-item .text h1 { font-size: 2rem; } .slider-item .text h2 { font-size: 1.5rem; } .img-about { height: auto; } }
       img { max-width: 100%; height: auto; }
+      html { overflow-x: hidden; }
+      body { overflow-x: hidden; }
+
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.08);
+        color: #fff;
+        cursor: pointer;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 1;
+        margin-left: 0.45rem;
+        max-width: 7.5rem;
+        padding: 0.38rem 0.58rem;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .theme-toggle:hover,
+      .theme-toggle:focus {
+        border-color: #ffc107;
+        color: #ffc107;
+        outline: none;
+      }
+
+      .theme-toggle-track {
+        position: relative;
+        display: inline-block;
+        width: 2.1rem;
+        height: 1.1rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.2);
+      }
+
+      .theme-toggle-knob {
+        position: absolute;
+        top: 0.18rem;
+        left: 0.18rem;
+        width: 0.74rem;
+        height: 0.74rem;
+        border-radius: 50%;
+        background: #ffc107;
+        transition: transform 0.2s ease;
+      }
+
+      html[data-theme="light"] .theme-toggle-knob {
+        transform: translateX(1rem);
+      }
+
+      html[data-theme="light"] body {
+        background: #f5f5f2;
+        color: #262626;
+      }
+
+      html[data-theme="light"] .ftco-navbar-light,
+      html[data-theme="light"] .ftco-navbar-light.scrolled,
+      html[data-theme="light"] .ftco-navbar-light.awake {
+        background: rgba(245,245,242,0.96) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      }
+
+      html[data-theme="light"] .ftco-navbar-light .navbar-brand,
+      html[data-theme="light"] .ftco-navbar-light.scrolled .navbar-brand,
+      html[data-theme="light"] .ftco-navbar-light .navbar-nav > .nav-item > .nav-link,
+      html[data-theme="light"] .ftco-navbar-light.scrolled .nav-item > .nav-link {
+        color: #161616 !important;
+      }
+
+      html[data-theme="light"] h1,
+      html[data-theme="light"] h2,
+      html[data-theme="light"] h3,
+      html[data-theme="light"] .heading a,
+      html[data-theme="light"] .heading-sidebar {
+        color: #161616 !important;
+      }
+
+      html[data-theme="light"] p,
+      html[data-theme="light"] li,
+      html[data-theme="light"] .meta,
+      html[data-theme="light"] .meta a,
+      html[data-theme="light"] .categories a {
+        color: #4f4f4f !important;
+      }
+
+      html[data-theme="light"] .sidebar-box,
+      html[data-theme="light"] .about-author,
+      html[data-theme="light"] .comment-body,
+      html[data-theme="light"] .comment-form-wrap form,
+      html[data-theme="light"] .search-form .form-control {
+        background: rgba(255,255,255,0.86) !important;
+        border-color: rgba(0,0,0,0.08) !important;
+      }
+
+      html[data-theme="light"] .form-control {
+        color: #262626 !important;
+        background: #fff !important;
+        border-color: rgba(0,0,0,0.14) !important;
+      }
+
+      html[data-theme="light"] .hero-wrap .bread,
+      html[data-theme="light"] .hero-wrap .breadcrumbs,
+      html[data-theme="light"] .hero-wrap .breadcrumbs a,
+      html[data-theme="light"] .hero-wrap .breadcrumbs span {
+        color: #fff !important;
+      }
+
+      html[data-theme="light"] .theme-toggle {
+        border-color: rgba(0,0,0,0.18);
+        background: rgba(0,0,0,0.04);
+        color: #161616;
+      }
+
+      html[data-theme="light"] .theme-toggle-track {
+        background: rgba(0,0,0,0.12);
+      }
+
+      @media (max-width: 991px) {
+        .theme-toggle { margin: 0.75rem auto 0; }
+      }
     </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -44,16 +182,20 @@
             <li class="nav-item"><a href="index.html#blog-section" class="nav-link"><span>My Blog</span></a></li>
             <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
           </ul>
+          <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+            <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-knob"></span></span>
+            <span class="theme-toggle-label">Dark</span>
+          </button>
         </div>
       </div>
     </nav>
     <section class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
-      <div class="container"><div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center"><div class="col-md-12 ftco-animate pb-5 mb-3 text-center"><h1 class="mb-3 bread">Research Notes</h1><p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="index.html#blog-section">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>AI-RAN and B5G <i class="ion-ios-arrow-forward"></i></span></p></div></div></div>
+      <div class="container"><div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center"><div class="col-md-12 ftco-animate pb-5 mb-3 text-center"><h1 class="mb-3 bread">AI-RAN and B5G Insights</h1><p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="index.html#blog-section">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>AI-RAN and B5G <i class="ion-ios-arrow-forward"></i></span></p></div></div></div>
     </section>
     <section class="ftco-section"><div class="container"><div class="row"><div class="col-lg-8 ftco-animate"><h2 class="mb-3">AI-RAN Sustainability and Community-Centered Emerging Technologies</h2><p>My work connects telecommunications engineering, B5G research, artificial intelligence and practical education. I am especially interested in how shared AI-and-RAN infrastructure can be evaluated not only for performance, but also for energy use, carbon impact and social value.</p><p><img src="images/image_3.jpg" alt="B5G and AI-RAN research" class="img-fluid"></p><p>The research theme <strong>AI-RAN Sustainability Accounting: Energy and Carbon Trade-Offs in Shared AI-and-RAN Infrastructure</strong>, co-authored with Imoter Igbazenda Tijah, examines how emerging network intelligence can be planned with sustainability metrics from the beginning.</p><h2 class="mb-3 mt-5">From B5G Research to Local Capacity Building</h2><p>My telecommunications research includes 5G network slicing, resource scheduling, traffic anomaly detection and Internet of Vehicles simulations using NS-3, MATLAB and Python. The same engineering mindset also shapes my teaching at PASS-DRC Academy, where students learn AI fundamentals, Python and introductory robotics through practical local problem-solving.</p><p><img src="images/image_2.jpg" alt="Emerging communication systems research" class="img-fluid"></p><p>PASS-DRC Academy and the Elima Programme are built around a simple conviction: emerging technology education should reach learners even where access to computers has historically been limited. Bilingual curricula in French and Swahili make AI and robotics more approachable for students preparing to participate in the digital economy.</p><p>Across research, teaching and community service, my goal is to translate advanced communication systems into tools, skills and evidence that help communities prepare for the next generation of connectivity.</p><div class="tag-widget post-tag-container mb-5 mt-5"><div class="tagcloud"><a href="#" class="tag-cloud-link">AI-RAN</a><a href="#" class="tag-cloud-link">B5G</a><a href="#" class="tag-cloud-link">Robotics Education</a><a href="#" class="tag-cloud-link">Sustainability</a></div></div><div class="about-author d-flex p-4 bg-dark"><div class="bio mr-5"><img src="images/about.jpg" alt="Ushindi Gabriel Matabaro" class="img-fluid mb-4"></div><div class="desc"><h3>Ushindi Gabriel Matabaro</h3><p>Telecom Engineer, researcher and Emerging Technologies Educator focused on 5G/B5G systems, AI-RAN sustainability, AI and Robotics education, and responsible technology adoption for community impact in D.R. Congo and across Sub-Saharan Africa.</p></div></div><div class="pt-5 mt-5"><h3 class="mb-5">Collaboration Themes</h3><ul class="comment-list"><li class="comment"><div class="vcard bio"><img src="images/person_1.jpg" alt="Telecommunications research theme"></div><div class="comment-body"><h3>Telecommunications Research</h3><div class="meta">5G/B5G, network slicing, resource scheduling</div><p>Applied research on intelligent communication systems, traffic anomaly detection and sustainable network infrastructure.</p><p><a href="index.html#contact-section" class="reply">Contact</a></p></div></li><li class="comment"><div class="vcard bio"><img src="images/person_1.jpg" alt="Technology education theme"></div><div class="comment-body"><h3>AI and Robotics Education</h3><div class="meta">PASS-DRC Academy and Elima Programme</div><p>Bilingual curricula and hands-on mentorship for young learners building practical AI, Python and robotics skills.</p><p><a href="index.html#resume-section" class="reply">View CV</a></p></div></li><li class="comment"><div class="vcard bio"><img src="images/person_1.jpg" alt="Community engagement theme"></div><div class="comment-body"><h3>Community Technology Engagement</h3><div class="meta">Digital literacy and responsible AI advocacy</div><p>ICT training, school engagement and public-good research for communities facing limited access to technology.</p><p><a href="index.html#projects-section" class="reply">Projects</a></p></div></li><li class="comment"><div class="vcard bio"><img src="images/person_1.jpg" alt="Sustainability theme"></div><div class="comment-body"><h3>Sustainable AI Infrastructure</h3><div class="meta">Energy and carbon trade-offs</div><p>Researching how shared AI and RAN infrastructure can be evaluated through both technical and environmental metrics.</p><p><a href="index.html#blog-section" class="reply">Read notes</a></p></div></li><li class="comment"><div class="vcard bio"><img src="images/person_1.jpg" alt="Professional network theme"></div><div class="comment-body"><h3>Professional Networks</h3><div class="meta">YALI and GEOSTRAT Research Group</div><p>Active in knowledge exchange, mentorship and collaborative telecommunications and AI research across Sub-Saharan Africa.</p><p><a href="index.html#resume-section" class="reply">Memberships</a></p></div></li><li class="comment"><div class="vcard bio"><img src="images/person_1.jpg" alt="Collaboration invitation"></div><div class="comment-body"><h3>Research and Education Partnerships</h3><div class="meta">Open to aligned collaboration</div><p>I welcome partnerships that connect rigorous network research with education, responsible AI adoption and measurable community benefit.</p><p><a href="index.html#contact-section" class="reply">Start a conversation</a></p></div></li></ul><div class="comment-form-wrap pt-5"><h3 class="mb-5">Start a collaboration</h3><form action="#" class="p-5 bg-dark"><div class="form-group"><label for="name">Name *</label><input type="text" class="form-control" id="name"></div><div class="form-group"><label for="email">Email *</label><input type="email" class="form-control" id="email"></div><div class="form-group"><label for="website">Website</label><input type="url" class="form-control" id="website"></div><div class="form-group"><label for="message">Message</label><textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea></div><div class="form-group"><input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary"></div></form></div></div></div><div class="col-lg-4 sidebar ftco-animate"><div class="sidebar-box"><form action="#" class="search-form"><div class="form-group"><span class="icon icon-search"></span><input type="text" class="form-control" placeholder="Type a keyword and hit enter"></div></form></div><div class="sidebar-box ftco-animate"><h3 class="heading-sidebar">Focus Areas</h3><ul class="categories"><li><a href="#">5G/B5G Networks <span>(Research)</span></a></li><li><a href="#">AI-RAN Sustainability <span>(Ongoing)</span></a></li><li><a href="#">AI and Robotics Education <span>(Teaching)</span></a></li><li><a href="#">Community Technology <span>(Service)</span></a></li></ul></div><div class="sidebar-box ftco-animate"><h3 class="heading-sidebar">Recent Notes</h3><div class="block-21 mb-4 d-flex"><a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a><div class="text"><h3 class="heading"><a href="#">AI-RAN Sustainability Accounting</a></h3><div class="meta"><div><a href="#"><span class="icon-calendar"></span> Research Note</a></div><div><a href="#"><span class="icon-person"></span> Gabriel</a></div><div><a href="#"><span class="icon-chat"></span> AI-RAN</a></div></div></div></div><div class="block-21 mb-4 d-flex"><a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a><div class="text"><h3 class="heading"><a href="#">Teaching Robotics in Bukavu</a></h3><div class="meta"><div><a href="#"><span class="icon-calendar"></span> Education Note</a></div><div><a href="#"><span class="icon-person"></span> Gabriel</a></div><div><a href="#"><span class="icon-chat"></span> Robotics</a></div></div></div></div><div class="block-21 mb-4 d-flex"><a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a><div class="text"><h3 class="heading"><a href="#">Beyond 5G Resource Scheduling</a></h3><div class="meta"><div><a href="#"><span class="icon-calendar"></span> B5G Research</a></div><div><a href="#"><span class="icon-person"></span> Gabriel</a></div><div><a href="#"><span class="icon-chat"></span> IoV</a></div></div></div></div></div><div class="sidebar-box ftco-animate"><h3 class="heading-sidebar">Tag Cloud</h3><div class="tagcloud"><a href="#" class="tag-cloud-link">AI-RAN</a><a href="#" class="tag-cloud-link">B5G</a><a href="#" class="tag-cloud-link">5G</a><a href="#" class="tag-cloud-link">Robotics</a><a href="#" class="tag-cloud-link">Python</a><a href="#" class="tag-cloud-link">ns-3</a><a href="#" class="tag-cloud-link">MATLAB</a><a href="#" class="tag-cloud-link">Education</a></div></div><div class="sidebar-box ftco-animate"><h3 class="heading-sidebar">Profile</h3><p>Ushindi Gabriel Matabaro works at the intersection of telecommunications engineering, AI research, robotics education and community technology engagement.</p></div></div></div></div></section>
-    <footer class="ftco-footer ftco-section"><div class="container"><div class="row mb-5"><div class="col-md"><div class="ftco-footer-widget mb-4"><h2 class="ftco-heading-2">About</h2><p>Telecom Engineer, researcher and Emerging Technologies Educator advancing 5G/B5G systems, AI-RAN sustainability, robotics education and responsible AI adoption.</p></div></div><div class="col-md"><div class="ftco-footer-widget mb-4 ml-md-4"><h2 class="ftco-heading-2">Links</h2><ul class="list-unstyled"><li><a href="index.html#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li><li><a href="index.html#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li><li><a href="index.html#resume-section"><span class="icon-long-arrow-right mr-2"></span>Resume</a></li><li><a href="index.html#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li><li><a href="index.html#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li></ul></div></div><div class="col-md"><div class="ftco-footer-widget mb-4"><h2 class="ftco-heading-2">Services</h2><ul class="list-unstyled"><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>5G/B5G Research</a></li><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>AI-RAN Sustainability</a></li><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>Robotics Education</a></li><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>ICT Training</a></li><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>Responsible AI Adoption</a></li></ul></div></div><div class="col-md"><div class="ftco-footer-widget mb-4"><h2 class="ftco-heading-2">Have Questions?</h2><ul class="list-unstyled"><li><span class="icon icon-map-marker"></span><span class="text"> D.R. Congo</span></li><li><a href="tel:+243970688665"><span class="icon icon-phone"></span><span class="text"> +243970688665</span></a></li><li><a href="mailto:gabrielmat@passdrc.com"><span class="icon icon-envelope"></span><span class="text"> gabrielmat@passdrc.com</span></a></li></ul></div></div></div><div class="row"><div class="col-md-12 text-center"><p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p></div></div></div></footer>
+    <footer class="ftco-footer ftco-section"><div class="container"><div class="row mb-5"><div class="col-md"><div class="ftco-footer-widget mb-4"><h2 class="ftco-heading-2">About</h2><p>Telecom Engineer, researcher and Emerging Technologies Educator advancing 5G/B5G systems, AI-RAN sustainability, robotics education and responsible AI adoption.</p></div></div><div class="col-md"><div class="ftco-footer-widget mb-4 ml-md-4"><h2 class="ftco-heading-2">Links</h2><ul class="list-unstyled"><li><a href="index.html#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li><li><a href="index.html#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li><li><a href="index.html#resume-section"><span class="icon-long-arrow-right mr-2"></span>Resume</a></li><li><a href="index.html#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li><li><a href="index.html#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li></ul></div></div><div class="col-md"><div class="ftco-footer-widget mb-4"><h2 class="ftco-heading-2">Services</h2><ul class="list-unstyled"><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>5G/B5G Research</a></li><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>AI-RAN Sustainability</a></li><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>Robotics Education</a></li><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>ICT Training</a></li><li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>Responsible AI Adoption</a></li></ul></div></div><div class="col-md"><div class="ftco-footer-widget mb-4"><h2 class="ftco-heading-2">Have Questions?</h2><ul class="list-unstyled"><li><span class="icon icon-map-marker"></span><span class="text"> D.R. Congo</span></li><li><a href="tel:+243977454546"><span class="icon icon-phone"></span><span class="text"> +243 977 4545 46</span></a></li><li><a href="mailto:ushindimat@gmail.com"><span class="icon icon-envelope"></span><span class="text"> ushindimat@gmail.com</span></a></li></ul></div></div></div><div class="row"><div class="col-md-12 text-center"><p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p></div></div></div></footer>
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-    <script src="js/jquery.min.js"></script><script src="js/jquery-migrate-3.0.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.easing.1.3.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/jquery.stellar.min.js"></script><script src="js/owl.carousel.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/aos.js"></script><script src="js/jquery.animateNumber.min.js"></script><script src="js/scrollax.min.js"></script><script src="js/main.js?v=20260919-nav-restore"></script><script>document.querySelectorAll('.navbar-nav .nav-link').forEach(link => { link.addEventListener('click', () => { document.querySelector('.navbar-collapse').classList.remove('show'); document.body.classList.remove('modal-open'); document.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'false'); }); });</script>
+    <script src="js/jquery.min.js"></script><script src="js/jquery-migrate-3.0.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.easing.1.3.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/jquery.stellar.min.js"></script><script src="js/owl.carousel.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/aos.js"></script><script src="js/jquery.animateNumber.min.js"></script><script src="js/scrollax.min.js"></script><script src="js/main.js?v=20260919-nav-restore"></script><script>document.querySelectorAll('.navbar-nav .nav-link').forEach(link => { link.addEventListener('click', () => { document.querySelector('.navbar-collapse').classList.remove('show'); document.body.classList.remove('modal-open'); document.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'false'); }); }); (function() { const root = document.documentElement; const toggle = document.querySelector('.theme-toggle'); const label = document.querySelector('.theme-toggle-label'); const systemTheme = window.matchMedia('(prefers-color-scheme: light)'); function storedTheme() { try { return localStorage.getItem('portfolio-theme'); } catch (error) { return null; } } function saveTheme(theme) { try { localStorage.setItem('portfolio-theme', theme); } catch (error) { root.setAttribute('data-theme', theme); } } function applyTheme(theme) { const nextTheme = theme === 'light' ? 'light' : 'dark'; root.setAttribute('data-theme', nextTheme); if (toggle) { toggle.setAttribute('aria-pressed', nextTheme === 'light' ? 'true' : 'false'); } if (label) { label.textContent = nextTheme === 'light' ? 'Light' : 'Dark'; } } applyTheme(root.getAttribute('data-theme') || (systemTheme.matches ? 'light' : 'dark')); if (toggle) { toggle.addEventListener('click', () => { const nextTheme = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light'; applyTheme(nextTheme); saveTheme(nextTheme); }); } const followSystemTheme = event => { if (!storedTheme()) { applyTheme(event.matches ? 'light' : 'dark'); } }; if (systemTheme.addEventListener) { systemTheme.addEventListener('change', followSystemTheme); } else if (systemTheme.addListener) { systemTheme.addListener(followSystemTheme); } })();</script>
   </body>
 </html>

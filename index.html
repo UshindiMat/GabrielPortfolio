@@ -4,6 +4,7 @@
     <title>Ushindi Gabriel Matabaro Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -259,13 +260,16 @@
       }
 
       .owl-carousel.home-slider .slider-item .slider-text h1 {
-        font-size: clamp(2.35rem, 3.4vw, 3.55rem);
+        font-size: clamp(2.2rem, 3.05vw, 3.25rem);
         line-height: 1.12;
-        max-width: 650px;
+        max-width: 420px;
       }
 
-      .owl-carousel.home-slider .slider-item .slider-text .text {
-        max-width: 720px;
+      @media (min-width: 992px) {
+        .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
+          max-width: 40%;
+          padding-right: 2rem;
+        }
       }
 
       html[data-theme="light"] .owl-carousel.home-slider .slider-item .slider-text .subheading {
@@ -348,6 +352,42 @@
 
       html[data-theme="light"] .progress {
         background: rgba(0,0,0,0.08) !important;
+      }
+
+      html[data-theme="light"] .progress-bar span,
+      .progress-bar span {
+        color: #161616 !important;
+        font-weight: 700;
+        text-shadow: none;
+      }
+
+      html[data-theme="light"] .contact-info .box h3,
+      html[data-theme="light"] .contact-info .box p,
+      html[data-theme="light"] .contact-info .box a,
+      html[data-theme="light"] .contact-form .form-control {
+        color: #262626 !important;
+      }
+
+      html[data-theme="light"] .contact-info .box .fancy-link {
+        color: #262626 !important;
+      }
+
+      html[data-theme="light"] .contact-info .box .fancy-link:hover {
+        color: #000 !important;
+      }
+
+      html[data-theme="light"] .contact-form {
+        background: rgba(255,255,255,0.9) !important;
+        border: 1px solid rgba(0,0,0,0.08);
+      }
+
+      html[data-theme="light"] .contact-form .form-control {
+        background: #fff !important;
+        border-color: rgba(0,0,0,0.14) !important;
+      }
+
+      html[data-theme="light"] .blog-entry .text {
+        color: #262626 !important;
       }
 
       html[data-theme="light"] .services-1:hover {
@@ -485,7 +525,7 @@
                         <li class="d-flex"><span>Name:</span> <span> Gabriel Matabaro Ushindi</span></li>
                         <li class="d-flex"><span>Address :</span> <span>D.R, Congo</span></li>
         
-                        <li class="d-flex"><span>Email:</span> <span>gabrielmat@passdrc.com</span></li>
+                        <li class="d-flex"><span>Email:</span> <span>ushindimat@gmail.com</span></li>
                         <li class="d-flex"><span>Phone: </span> <span>+243 977 4545 46</span></li>
                     </ul>
                   </div>
@@ -776,6 +816,12 @@
 						background: rgba(255,255,255,0.02);
 					}
 
+          .presentations-section .section-title {
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
+
 					.fancy-border {
 						position: relative;
 						display: inline-block;
@@ -976,6 +1022,25 @@
           .certification-icon {
             font-size: 2.5em;
             color: #ffc107;
+            min-width: 3.5rem;
+            text-align: center;
+          }
+
+          .icon-matlab::before {
+            content: "ML";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.25rem;
+            height: 3.25rem;
+            border-radius: 50%;
+            background: rgba(255, 189, 57, 0.14);
+            border: 1px solid rgba(255, 189, 57, 0.45);
+            color: #ffbd39;
+            font-family: Poppins, Arial, sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
           }
 
           .certification-content h3 {
@@ -1396,13 +1461,14 @@
 .progress-bar {
 	position: relative;
 }
-.progress-value {
+.progress-bar span {
 	position: absolute;
 	right: 10px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: white;
-	font-weight: bold;
+	color: #161616;
+	font-weight: 700;
+	text-shadow: none;
 }
 </style>
 
@@ -1638,7 +1704,7 @@
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Blog</h1>
-            <h2 class="mb-4">My Blog</h2>
+            <h2 class="mb-4">Research and Teaching Insights</h2>
             <p>Explore reflections on 5G/B5G systems, AI-RAN sustainability, robotics education and responsible AI adoption for African communities.</p>
           </div>
         </div>
@@ -1696,6 +1762,42 @@
           </div>
         </div>
       </div>
+      <style>
+        #blog-section .blog-entry {
+          width: 100%;
+        }
+
+        #blog-section .blog-entry .text {
+          min-height: 310px;
+          padding: 2rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #blog-section .blog-entry .meta,
+        #blog-section .blog-entry .meta p {
+          justify-content: center;
+          text-align: center;
+        }
+
+        #blog-section .blog-entry .heading {
+          max-width: 92%;
+        }
+
+        #blog-section .blog-entry p {
+          max-width: 92%;
+        }
+
+        @media (max-width: 767.98px) {
+          #blog-section .blog-entry .text {
+            min-height: auto;
+            padding: 1.5rem;
+          }
+        }
+      </style>
     </section>
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
@@ -1776,7 +1878,7 @@
                     <span class="icon-paper-plane"></span>
                 </div>
                 <h3 class="mb-4">Email Address</h3>
-                <p><a href="mailto:info@yoursite.com">gabrielmat@passdrc.com</a></p>
+                <p><a href="mailto:ushindimat@gmail.com">ushindimat@gmail.com</a></p>
               </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -1819,7 +1921,7 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="https://formsubmit.co/gabrielmat@passdrc.com" method="POST" class="bg-light p-4 p-md-5 contact-form">
+            <form action="https://formsubmit.co/ushindimat@gmail.com" method="POST" class="bg-light p-4 p-md-5 contact-form">
               <!-- Honey pot to prevent spam -->
               <input type="text" name="_honey" style="display: none;">
               
@@ -1905,7 +2007,7 @@
                   <ul>
                     <li><span class="icon icon-map-marker"></span><span class="text">A22,D.R Congo </span></li>
                     <li><a href="tel:+243977454546"><span class="icon icon-phone"></span><span class="text">+243 977 4545 46</span></a></li>
-                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">gabrielmat@passdrc.com</span></a></li>
+                    <li><a href="mailto:ushindimat@gmail.com"><span class="icon icon-envelope"></span><span class="text">ushindimat@gmail.com</span></a></li>
                   </ul>
                 </div>
             </div>

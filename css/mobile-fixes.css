@@ -118,6 +118,88 @@
 
 /* Mobile specific fixes */
 @media (max-width: 767px) {
+    :root {
+        --mobile-page-gutter: 1.5rem;
+        --mobile-card-gutter: 1.15rem;
+    }
+
+    body {
+        text-rendering: optimizeLegibility;
+    }
+
+    #ftco-navbar .container,
+    .ftco-section .container,
+    .hero-wrap .container,
+    .ftco-footer .container {
+        padding-left: var(--mobile-page-gutter);
+        padding-right: var(--mobile-page-gutter);
+    }
+
+    .ftco-section .row,
+    .hero-wrap .row,
+    .ftco-footer .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .ftco-section [class*="col-"],
+    .hero-wrap [class*="col-"],
+    .ftco-footer [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ftco-section p,
+    .ftco-section li,
+    .ftco-hireme p,
+    .ftco-footer p,
+    .comment-body p,
+    .sidebar-box p {
+        text-align: left;
+        text-align-last: left;
+        hyphens: manual;
+        overflow-wrap: break-word;
+    }
+
+    .heading-section p,
+    .ftco-about .heading-section p,
+    #resume-section .heading-section p,
+    .col-lg-8 > p {
+        font-size: 1.05rem;
+        line-height: 1.72;
+        max-width: 100%;
+        text-align: left;
+        text-align-last: left;
+    }
+
+    .hero-wrap {
+        min-height: 320px !important;
+        height: auto !important;
+    }
+
+    .hero-wrap .slider-text {
+        min-height: 320px !important;
+        height: auto !important;
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero-wrap .bread {
+        font-size: clamp(2.05rem, 10.5vw, 2.85rem) !important;
+        line-height: 1.08;
+        margin-bottom: 1.25rem !important;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .hero-wrap .breadcrumbs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem 0.65rem;
+        line-height: 1.7;
+    }
+
     #ftco-navbar .navbar-brand {
         max-width: calc(100vw - 110px);
         font-size: 1.15rem;
@@ -188,17 +270,8 @@
         margin-bottom: 1.75rem !important;
     }
 
-    .heading-section p,
-    .ftco-about .heading-section p,
-    #resume-section .heading-section p {
-        font-size: 1.05rem;
-        line-height: 1.72;
-        max-width: 100%;
-        text-align: left;
-    }
-
     .resume-box {
-        padding: 0.55rem !important;
+        padding: 0.85rem !important;
         margin-bottom: 1.35rem;
         border-radius: 0.85rem;
     }
@@ -223,7 +296,7 @@
     }
 
     .resume-wrap {
-        padding: 0.9rem 0.65rem !important;
+        padding: 1rem 0.85rem !important;
         margin-bottom: 1.25rem !important;
         border-radius: 0.85rem;
     }
@@ -250,7 +323,7 @@
 
     .timeline-content {
         margin-bottom: 0 !important;
-        padding-left: 0.6rem !important;
+        padding-left: 0.8rem !important;
         padding-right: 0 !important;
         border-left-width: 2px !important;
     }
@@ -279,7 +352,7 @@
     .achievements {
         background: rgba(255,255,255,0.025);
         margin-top: 1rem !important;
-        padding: 0.72rem 0.6rem !important;
+        padding: 0.85rem var(--mobile-card-gutter) !important;
         border-radius: 0.65rem;
     }
 
@@ -298,6 +371,7 @@
         font-size: 1rem;
         line-height: 1.72;
         text-align: left;
+        text-align-last: left;
     }
 
     .details li,
@@ -311,13 +385,57 @@
         line-height: 1.2;
         white-space: nowrap;
     }
+
+    .services-1,
+    .research-box,
+    .award-card,
+    .blog-entry .text,
+    .contact-info .box,
+    .sidebar-box,
+    .about-author,
+    .comment-body,
+    .comment-form-wrap form {
+        padding-left: var(--mobile-card-gutter) !important;
+        padding-right: var(--mobile-card-gutter) !important;
+    }
+
+    #blog-section .blog-entry .text,
+    .blog-entry .text {
+        text-align: left;
+    }
+
+    #blog-section .blog-entry .heading,
+    #blog-section .blog-entry .meta,
+    #blog-section .blog-entry .meta p {
+        text-align: center;
+        text-align-last: center;
+    }
+
+    .contact-info .box p,
+    .ftco-footer li,
+    .ftco-footer a,
+    .meta,
+    .breadcrumbs,
+    .tagcloud,
+    .btn,
+    .timeline-badge,
+    .grade {
+        text-align: initial;
+        text-align-last: auto;
+        hyphens: manual;
+    }
 }
 
 @media (max-width: 420px) {
+    :root {
+        --mobile-page-gutter: 1.45rem;
+        --mobile-card-gutter: 1rem;
+    }
+
     #ftco-navbar .container,
     .ftco-section .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: var(--mobile-page-gutter);
+        padding-right: var(--mobile-page-gutter);
     }
 
     #ftco-navbar .navbar-brand {
@@ -331,7 +449,7 @@
     }
 
     .timeline-content {
-        padding-left: 0.55rem !important;
+        padding-left: 0.72rem !important;
     }
 
     .timeline-content h2,
@@ -341,6 +459,6 @@
 
     .details,
     .achievements {
-        padding: 0.65rem 0.45rem !important;
+        padding: 0.78rem var(--mobile-card-gutter) !important;
     }
 }

@@ -163,4 +163,184 @@
         margin-top: 50vh;
         transform: translateY(-50%);
     }
+
+    .ftco-section {
+        padding: 4.5rem 0;
+    }
+
+    .heading-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .heading-section h1.big,
+    .heading-section h1.big.big-2 {
+        top: -0.35rem;
+        font-size: clamp(3.5rem, 18vw, 5.75rem);
+        line-height: 0.9;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .heading-section h2 {
+        font-size: clamp(2rem, 10vw, 2.55rem);
+        line-height: 1.1;
+        margin-bottom: 1.75rem !important;
+    }
+
+    .heading-section p,
+    .ftco-about .heading-section p,
+    #resume-section .heading-section p {
+        font-size: 1.05rem;
+        line-height: 1.72;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .resume-box {
+        padding: 0.55rem !important;
+        margin-bottom: 1.35rem;
+        border-radius: 0.85rem;
+    }
+
+    .resume-box:hover {
+        transform: none;
+    }
+
+    .section-title,
+    .presentations-section .section-title {
+        display: block;
+        width: 100%;
+        font-size: clamp(1.12rem, 5vw, 1.35rem) !important;
+        line-height: 1.28;
+        margin-bottom: 1.25rem !important;
+        padding-bottom: 0.75rem;
+        text-align: left;
+    }
+
+    .presentations-section .section-title {
+        text-align: center;
+    }
+
+    .resume-wrap {
+        padding: 0.9rem 0.65rem !important;
+        margin-bottom: 1.25rem !important;
+        border-radius: 0.85rem;
+    }
+
+    .timeline-badge {
+        display: inline-flex !important;
+        align-items: center;
+        max-width: 100%;
+        margin-bottom: 1.05rem !important;
+        padding: 0.62rem 0.9rem !important;
+        border-radius: 999px !important;
+    }
+
+    .timeline-badge .date,
+    .resume-wrap .date {
+        display: inline-block;
+        color: #000;
+        font-size: clamp(1rem, 4.5vw, 1.18rem) !important;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+    }
+
+    .timeline-content {
+        margin-bottom: 0 !important;
+        padding-left: 0.6rem !important;
+        padding-right: 0 !important;
+        border-left-width: 2px !important;
+    }
+
+    .timeline-content h2,
+    .resume-wrap h2 {
+        font-size: clamp(1.32rem, 6vw, 1.6rem) !important;
+        line-height: 1.32;
+        margin-bottom: 0.7rem;
+        max-width: 100%;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .position,
+    .resume-wrap .position {
+        display: block;
+        font-size: 0.72rem !important;
+        line-height: 1.65;
+        letter-spacing: 0.18em !important;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .details,
+    .achievements {
+        background: rgba(255,255,255,0.025);
+        margin-top: 1rem !important;
+        padding: 0.72rem 0.6rem !important;
+        border-radius: 0.65rem;
+    }
+
+    .details h4,
+    .achievements h4 {
+        font-size: 1rem !important;
+        line-height: 1.4;
+    }
+
+    .details p,
+    .achievements p,
+    .details li,
+    .achievements li,
+    .resume-wrap p,
+    .resume-wrap li {
+        font-size: 1rem;
+        line-height: 1.72;
+        text-align: left;
+    }
+
+    .details li,
+    .achievements li {
+        padding-left: 1.15rem !important;
+        margin-bottom: 0.65rem;
+    }
+
+    .grade {
+        font-size: 0.86rem;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 420px) {
+    #ftco-navbar .container,
+    .ftco-section .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #ftco-navbar .navbar-brand {
+        font-size: 1rem;
+        max-width: calc(100vw - 96px);
+    }
+
+    .navbar-toggler {
+        font-size: 1rem;
+        letter-spacing: 0.12em;
+    }
+
+    .timeline-content {
+        padding-left: 0.55rem !important;
+    }
+
+    .timeline-content h2,
+    .resume-wrap h2 {
+        font-size: clamp(1.24rem, 5.6vw, 1.48rem) !important;
+    }
+
+    .details,
+    .achievements {
+        padding: 0.65rem 0.45rem !important;
+    }
 }

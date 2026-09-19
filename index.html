@@ -26,6 +26,18 @@
     <link rel="preload" href="images/about.jpg" as="image">
     <link rel="preload" href="images/man sittingonpc.jpg" as="image">
 
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('portfolio-theme');
+          var systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', savedTheme || systemTheme);
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
     <style>
       /* Add custom media queries for responsiveness */
       @media (max-width: 768px) {
@@ -132,6 +144,145 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
       }
+
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.08);
+        color: #fff;
+        cursor: pointer;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 1;
+        margin-left: 0.75rem;
+        padding: 0.42rem 0.68rem;
+        text-transform: uppercase;
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      }
+
+      .theme-toggle:hover,
+      .theme-toggle:focus {
+        border-color: #ffc107;
+        color: #ffc107;
+        outline: none;
+      }
+
+      .theme-toggle-track {
+        position: relative;
+        display: inline-block;
+        width: 2.1rem;
+        height: 1.1rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.2);
+      }
+
+      .theme-toggle-knob {
+        position: absolute;
+        top: 0.18rem;
+        left: 0.18rem;
+        width: 0.74rem;
+        height: 0.74rem;
+        border-radius: 50%;
+        background: #ffc107;
+        transition: transform 0.2s ease;
+      }
+
+      html[data-theme="light"] .theme-toggle-knob {
+        transform: translateX(1rem);
+      }
+
+      html[data-theme="light"] body {
+        background: #f5f5f2;
+        color: #262626;
+      }
+
+      html[data-theme="light"] .ftco-navbar-light,
+      html[data-theme="light"] .ftco-navbar-light.scrolled,
+      html[data-theme="light"] .ftco-navbar-light.awake {
+        background: rgba(245,245,242,0.96) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      }
+
+      html[data-theme="light"] .navbar-brand,
+      html[data-theme="light"] .nav-link,
+      html[data-theme="light"] .heading-section h2,
+      html[data-theme="light"] .section-title,
+      html[data-theme="light"] .resume-wrap h2,
+      html[data-theme="light"] .presentation-title,
+      html[data-theme="light"] .certification-content h3,
+      html[data-theme="light"] .award-title,
+      html[data-theme="light"] .blog-entry .heading a,
+      html[data-theme="light"] .ftco-footer .ftco-heading-2 {
+        color: #161616 !important;
+      }
+
+      html[data-theme="light"] .big,
+      html[data-theme="light"] .big-2 {
+        color: rgba(0,0,0,0.08) !important;
+      }
+
+      html[data-theme="light"] .resume-box,
+      html[data-theme="light"] .resume-wrap,
+      html[data-theme="light"] .timeline-content,
+      html[data-theme="light"] .details,
+      html[data-theme="light"] .achievements,
+      html[data-theme="light"] .presentation-card,
+      html[data-theme="light"] .certification-card,
+      html[data-theme="light"] .research-box,
+      html[data-theme="light"] .award-card,
+      html[data-theme="light"] .services-1,
+      html[data-theme="light"] .contact-info .box,
+      html[data-theme="light"] .blog-entry .text {
+        background: rgba(255,255,255,0.82) !important;
+        border-color: rgba(0,0,0,0.08) !important;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      }
+
+      html[data-theme="light"] .position,
+      html[data-theme="light"] .meta,
+      html[data-theme="light"] .presentation-venue,
+      html[data-theme="light"] .certification-meta,
+      html[data-theme="light"] .award-date,
+      html[data-theme="light"] .award-description,
+      html[data-theme="light"] p,
+      html[data-theme="light"] li {
+        color: #4f4f4f !important;
+      }
+
+      html[data-theme="light"] .theme-toggle {
+        border-color: rgba(0,0,0,0.18);
+        background: rgba(0,0,0,0.04);
+        color: #161616;
+      }
+
+      html[data-theme="light"] .theme-toggle-track {
+        background: rgba(0,0,0,0.12);
+      }
+
+      html[data-theme="light"] .ftco-footer {
+        background: #111 !important;
+      }
+
+      html[data-theme="light"] .ftco-footer p,
+      html[data-theme="light"] .ftco-footer li,
+      html[data-theme="light"] .ftco-footer a,
+      html[data-theme="light"] .ftco-footer .text {
+        color: rgba(255,255,255,0.75) !important;
+      }
+
+      html[data-theme="light"] .ftco-footer .ftco-heading-2 {
+        color: #fff !important;
+      }
+
+      @media (max-width: 991px) {
+        .theme-toggle {
+          margin: 0.75rem auto 0;
+        }
+      }
     </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -155,6 +306,10 @@
               <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
               <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact </span></a></li>
             </ul>
+            <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+              <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-knob"></span></span>
+              <span class="theme-toggle-label">Dark</span>
+            </button>
           </div>
         </div>
       </nav>
@@ -1698,6 +1853,62 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       document.querySelectorAll('.home-slider .slider-item').forEach(item => {
         item.style.overflowY = 'auto';
       });
+
+      (function() {
+        const root = document.documentElement;
+        const toggle = document.querySelector('.theme-toggle');
+        const label = document.querySelector('.theme-toggle-label');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: light)');
+
+        function storedTheme() {
+          try {
+            return localStorage.getItem('portfolio-theme');
+          } catch (error) {
+            return null;
+          }
+        }
+
+        function saveTheme(theme) {
+          try {
+            localStorage.setItem('portfolio-theme', theme);
+          } catch (error) {
+            root.setAttribute('data-theme', theme);
+          }
+        }
+
+        function applyTheme(theme) {
+          const nextTheme = theme === 'light' ? 'light' : 'dark';
+          root.setAttribute('data-theme', nextTheme);
+          if (toggle) {
+            toggle.setAttribute('aria-pressed', nextTheme === 'light' ? 'true' : 'false');
+          }
+          if (label) {
+            label.textContent = nextTheme === 'light' ? 'Light' : 'Dark';
+          }
+        }
+
+        applyTheme(root.getAttribute('data-theme') || (systemTheme.matches ? 'light' : 'dark'));
+
+        if (toggle) {
+          toggle.addEventListener('click', () => {
+            const nextTheme = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            applyTheme(nextTheme);
+            saveTheme(nextTheme);
+          });
+        }
+
+        const followSystemTheme = event => {
+          if (!storedTheme()) {
+            applyTheme(event.matches ? 'light' : 'dark');
+          }
+        };
+
+        if (systemTheme.addEventListener) {
+          systemTheme.addEventListener('change', followSystemTheme);
+        } else if (systemTheme.addListener) {
+          systemTheme.addListener(followSystemTheme);
+        }
+      })();
   </script>
     
   </body>
